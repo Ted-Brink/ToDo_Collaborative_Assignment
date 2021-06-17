@@ -10,8 +10,8 @@ public class PersonSequencer {
         return personId;
     }
 
- //   static reset() {      Fungerar inte med static
- //       personId = 0;
- //   }
+    static void reset() {
+        personId = 0;
+    }
 
 }
