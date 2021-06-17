@@ -19,4 +19,14 @@ public class People {
     public void clear() {}
 
 
+
+    // När allt annat är klart:
+    // Lägg till Functionality to remove object from array. (not nulling) First: you need to find the correct array
+    // index of the object. Second: You need to rebuild array by excluding the object on found index.
+
+
+}
+
+
+
 }
