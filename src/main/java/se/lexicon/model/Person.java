@@ -1,7 +1,7 @@
 package se.lexicon.model;
 
 
-class Person {
+public class Person {
     final int personId;
     String firstName;
     String lastName;

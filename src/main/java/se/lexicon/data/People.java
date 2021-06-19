@@ -2,11 +2,11 @@ package se.lexicon.data;
 
 import se.lexicon.model.Person;
 
-public class People {
+ class People {
    private static Person[] personer = new Person[0];
 
    public int size() {
-       int antalPerson = Personer.length;
+       int antalPerson = personer.length;
        return antalPerson;
    }
 
