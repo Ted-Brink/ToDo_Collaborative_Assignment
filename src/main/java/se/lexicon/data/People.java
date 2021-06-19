@@ -2,24 +2,43 @@ package se.lexicon.data;
 
 import se.lexicon.model.Person;
 
- class People {
-   private static Person[] personer = new Person[0];
+import java.util.Arrays;
+
+class People {
+   private static Person[] personer = new Person[0];   // Array för lagring av Person
 
    public int size() {
-       //int antalPerson = personer.length;
        return personer.length;
    }
 
-   public Person[] findAll() {}
+   //public Person[] findAll() {}         ////// GÖR METOD
 
-    public Person findById(int personId) {}
+    // public Person findById(int personId) {}  //////// GÖR METOD
+
 
     // Metod skapa ny Person
 
+    public static boolean skapaNyPerson(Person nyPerson) {
+
+        // Utökning av Array
+        Person[] expandedArray = Arrays.copyOf(personer, personer.length + 1);
+
+        // System.out.println("Arrays.toString(expandedArray) = " + Arrays.toString(expandedArray));  inget stringobjekt, fungerar inte på Person
+
+        // Lägg till Person i utökad Array.
+        expandedArray[expandedArray.length - 1] = nyPerson;
+
+        // Byt ut den utökade Array mot orginalArray som nu blir utökad
+        personer = expandedArray;
+
+        System.out.println("Person tilllagd");
+        //   System.out.println("Arrays.toString(songTitle) = " + Arrays.toString(songTitles)); Har ingen toStringmetod för Person-objekt
+        return true;
+
+    }
 
 
-
-    public void clear() {              // static??? clear Person Array
+    public void clearPersoner(){              // static??? clear Person Array
        personer = new Person[0];
     }
 
@@ -34,4 +53,4 @@ import se.lexicon.model.Person;
 
 
 
-}
+
