@@ -15,7 +15,7 @@ public class Person {
         return personId;
     }
     public void setPersonID(int personID) {
-       // this.personId = personId;               // Tror inte det ska var någon metod här eftersom personId är final
+        //this.personId = personId;               // Tror inte det ska var någon metod här eftersom personId är final
     }
 
     public String getFirstName() {
