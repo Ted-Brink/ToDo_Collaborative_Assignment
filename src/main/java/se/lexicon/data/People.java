@@ -11,14 +11,29 @@ class People {
        return personer.length;
    }
 
-   //public Person[] findAll() {}         ////// GÖR METOD
+   public Person[] findAll() {
+       Person[] personLista = Arrays.copyOf(personer,personer.length);
+       return personLista;
+   }
+
+
+
+
+/*
+    public static String[] findAllTitles(){
+        String[] songList = Arrays.copyOf(songTitles, songTitles.length);
+        return songList;
+    }
+
+        */
+
 
     // public Person findById(int personId) {}  //////// GÖR METOD
 
 
     // Metod skapa ny Person
 
-    public static boolean skapaNyPerson(Person nyPerson) {
+    public static boolean skapaNyPerson(Person nyPerson) { // behöver det vara en boolean retur???
 
         // Utökning av Array
         Person[] expandedArray = Arrays.copyOf(personer, personer.length + 1);
@@ -32,7 +47,7 @@ class People {
         personer = expandedArray;
 
         System.out.println("Person tilllagd");
-        //   System.out.println("Arrays.toString(songTitle) = " + Arrays.toString(songTitles)); Har ingen toStringmetod för Person-objekt
+        //   System.out.println("Arrays.toString(personer) = " + Arrays.toString(songTitles)); Har ingen toStringmetod för Person-objekt
         return true;
 
     }
