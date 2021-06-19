@@ -2,20 +2,28 @@ package se.lexicon.data;
 
 import se.lexicon.model.Todo;
 
+import java.util.Arrays;
+
 public class TodoItems {
 
     private static Todo[] todos = new Todo[0];
 
     public int size() {
-        int antalTodos = todos.length;
-        return antalTodos;
+        return todos.length;
     }
 
-    public Todo[] findAll(){}
+    public Todo[] findAll() {
+        Todo[] todoLista = Arrays.copyOf(todos, todos.length);
+        return todoLista;
+    }
 
-    public Todo findById(int todoId) {}
+    //public Todo findById(int todoId) {} ////////// GÖR METOD  ////////////
 
-    public void clear() {}
+    public void clear() {       // Static??? clear Todo Array
+   todos = new Todo[0];
+
+
+    }
 
 /*    10. Add the following methods to TodoItems class
     a. public Todo[] findByDoneStatus(boolean doneStatus)

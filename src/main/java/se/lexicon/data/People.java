@@ -17,7 +17,10 @@ class People {
    }
 
 
-    // public Person findById(int personId) {}  //////// GÖR METOD
+    // public Person findById(int personId) {}  //////// GÖR METOD ///////////////////////
+
+
+
 
 
     // Metod skapa ny Person
