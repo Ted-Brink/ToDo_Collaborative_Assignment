@@ -6,8 +6,8 @@ import se.lexicon.model.Person;
    private static Person[] personer = new Person[0];
 
    public int size() {
-       int antalPerson = personer.length;
-       return antalPerson;
+       //int antalPerson = personer.length;
+       return personer.length;
    }
 
    public Person[] findAll() {}
@@ -16,7 +16,12 @@ import se.lexicon.model.Person;
 
     // Metod skapa ny Person
 
-    public void clear() {}
+
+
+
+    public void clear() {              // static??? clear Person Array
+       personer = new Person[0];
+    }
 
 
 
