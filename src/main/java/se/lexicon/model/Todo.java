@@ -1,13 +1,15 @@
 package se.lexicon.model;
 
-public class Todo {
-    final int todoId;
-    String description;
-    boolean done;
-    Person assignee;
+import se.lexicon.data.TodoSequencer;
 
-    public Todo(int todoId, String description) {
-        this.todoId = todoId;
+public class Todo {
+    private final int todoId;
+    private String description;
+    private boolean done;
+    private Person assignee;
+
+    public Todo(String description) {
+        this.todoId = TodoSequencer.nextTodoId();
         this.description = description;
     }
 

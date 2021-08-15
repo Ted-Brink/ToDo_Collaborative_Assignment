@@ -1,31 +1,31 @@
 package se.lexicon.data;
 
 import se.lexicon.model.Person;
-
 import java.util.Arrays;
 
 class People {
-   private static Person[] personer = new Person[0];   // Array för lagring av Person
+    private  Person[] personer = new Person[0];   // Array för lagring av Person
 
-   public int size() {                                 // Antal moduler i Arrayen
-       return personer.length;
-   }
+    public int size() {                                 // Antal moduler i Arrayen
+        return personer.length;
+    }
 
-   public Person[] findAll() {                          // Returnerar en Array med alla Personobjekt.
-       Person[] personLista = Arrays.copyOf(personer,personer.length);
-       return personLista;
-   }
+    public Person[] findAll() {                          // Returnerar en Array med alla Personobjekt.
+        Person[] personLista = Arrays.copyOf(personer, personer.length);
+        return personLista;
+    }
 
-
-    // public Person findById(int personId) {}  //////// GÖR METOD ///////////////////////
-
-
-
-
+    public Person findById(int personId) {  //return the person that has a mathing personId as the passed in parameter.
+        for (int i = 0; i < personer.length; i++) {
+            if (personId == personer[i].getPersonID())
+                return personer[i];
+        }
+        return null;
+    }
 
     // Metod skapa ny Person
 
-    public static boolean skapaNyPerson(Person nyPerson) {              // behöver det vara en boolean retur???
+    public  boolean skapaNyPerson(Person nyPerson) {              // behöver det vara en boolean retur???
 
         // Utökning av Array
         Person[] expandedArray = Arrays.copyOf(personer, personer.length + 1);
@@ -43,8 +43,8 @@ class People {
         return true;
     }
 
-    public void clearPersoner(){              // static??? clear Person Array
-       personer = new Person[0];
+    public void clearPersoner() {              //  clear Person Array
+        personer = new Person[0];
     }
 
     // När allt annat är klart:
