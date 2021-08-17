@@ -21,6 +21,9 @@ public class AppTest
     }
 
     Person hej = new Person("kalle", "Anka");
+    Person hej2 = new Person("Musse", "Pigg");
+
+
 
 
 

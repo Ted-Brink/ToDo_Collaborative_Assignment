@@ -15,7 +15,7 @@ class People {
         return personLista;
     }
 
-    public Person findById(int personId) {  //return the person that has a mathing personId as the passed in parameter.
+    public Person findById(int personId) {  //return the person that has a matching personId as the passed in parameter.
         for (int i = 0; i < personer.length; i++) {
             if (personId == personer[i].getPersonID())
                 return personer[i];
@@ -30,8 +30,6 @@ class People {
         // Utökning av Array
         Person[] expandedArray = Arrays.copyOf(personer, personer.length + 1);
 
-        // System.out.println("Arrays.toString(expandedArray) = " + Arrays.toString(expandedArray));  inget stringobjekt, fungerar inte på Person
-
         // Lägg till Person i utökad Array.
         expandedArray[expandedArray.length - 1] = nyPerson;
 
@@ -39,7 +37,6 @@ class People {
         personer = expandedArray;
 
         System.out.println("Person tilllagd");
-        //   System.out.println("Arrays.toString(personer) = " + Arrays.toString(songTitles)); Har ingen toStringmetod för Person-objekt
         return true;
     }
 

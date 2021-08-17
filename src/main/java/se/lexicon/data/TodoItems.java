@@ -50,7 +50,7 @@ public class TodoItems {
 
     public Todo[] findByAssignee(Person assignee) // - Returns array with objects that has sent in Person.
 
-            d. public Todo[] findUnassignedTodoItems() // - Returns an array of objects that does not have an assignee set.
+     public Todo[] findUnassignedTodoItems() // - Returns an array of objects that does not have an assignee set.
 
 
 

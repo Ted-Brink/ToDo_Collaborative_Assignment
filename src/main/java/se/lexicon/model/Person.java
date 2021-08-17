@@ -17,9 +17,6 @@ public class Person {
         return personId;
     }
 
-   // public void setPersonID(int personID) {
-   //     //this.personId = personId;               // Tror inte det ska var någon metod här eftersom personId är final
-   // }
    // Ta bort onödiga set and get
 
     public String getFirstName() {
@@ -39,7 +36,7 @@ public class Person {
     }
 
     @Override
-    public String toString() {
+    public String toString() {      // Används för test, kan ta bort.
         return "Person{" +
                 "personId=" + personId +
                 ", firstName='" + firstName + '\'' +

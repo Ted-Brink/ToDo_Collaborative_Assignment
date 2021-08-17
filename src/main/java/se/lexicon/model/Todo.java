@@ -13,6 +13,8 @@ public class Todo {
         this.description = description;
     }
 
+    // Ta bort onödiga get & set
+
     public int getTodoId() {
         return todoId;
     }
@@ -33,9 +35,7 @@ public class Todo {
         this.done = done;
     }
 
-    public Person getAssignee() {
-        return assignee;
-    }
+    public Person getAssignee() { return assignee; }
 
     public void setAssignee(Person assignee) {
         this.assignee = assignee;
