@@ -27,19 +27,22 @@ public class TodoItems {
     public void clear() {       // Clear Todo Array
         todos = new Todo[0];
     }
-}
 
-/*
+
     // - Returns array with objects that has a matching done status
     public Todo[] findByDoneStatus(boolean doneStatus) {
 
-     for(int i = 0; i < todos.length; i++) {
-            if(todos[i].isDone() == true){
+        for (int i = 0; i < todos.length; i++) {
+            if (todos[i].isDone() == doneStatus) {
 
             }
-        return null;
         }
+        return null;
+    }
 
+}
+
+/*
     public Todo[] findByAssignee(int personId) {       //- Returns array with objects that has an assignee with a personId matching.
 
        // finns metod att hämta Id i People-classen findById()

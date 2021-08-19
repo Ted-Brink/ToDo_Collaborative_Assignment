@@ -1,6 +1,8 @@
 package se.lexicon;
 
+import se.lexicon.data.TodoItems;
 import se.lexicon.model.Person;
+import se.lexicon.model.Todo;
 
 /**
  * Hello world!
@@ -20,6 +22,13 @@ public class App
         System.out.println(hej.getFirstName());
         System.out.println(hej1.getPersonID());
         System.out.println(hej2.getPersonID());
+
+
+        Todo clean = new Todo("städa garaget");
+
+        TodoItems storage = new TodoItems();
+
+//        storage.add(clean);
 
     }
 }
